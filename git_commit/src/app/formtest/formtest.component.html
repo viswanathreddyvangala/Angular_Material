@@ -1,0 +1,33 @@
+<p>formtest works!</p>
+
+
+<section class="example-container"> 
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" [formGroup]="rform"  (ngSubmit)="onSubmit()">
+        <mat-form-field >
+          <input type="email" 
+           matInput 
+           placeholder="Input"  
+            formControlName="email"
+            required
+          >
+    
+        </mat-form-field>
+        <mat-form-field hintLabel ="Password  must be 6 charecters length" >  
+          <input type="password" 
+                 matInput 
+                 placeholder="password" 
+                 formControlName="password"
+                 >
+    
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date"  formControlName="date"  required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled] ="rform.invalid">Submit</button>
+    </form>
+        
+    </section>
+    
+    

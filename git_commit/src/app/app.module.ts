@@ -10,11 +10,15 @@ import {FlexLayoutModule} from '@angular/flex-layout'
 import {FormsModule} from '@angular/forms';
 import {MatDatepickerModule } from '@angular/material'
 import { from } from 'rxjs';
+import { FormtestComponent } from './formtest/formtest.component'; 
+import {SampleModule} from './sample/sample.module';
+import { FormtestModule } from './formtest/formtest.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent
+    SampleComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -22,9 +26,12 @@ import { from } from 'rxjs';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    SampleModule,
+    FormtestModule
   ],
   providers: [MatDatepickerModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] ,
+  exports:[FormtestModule,SampleModule]
 })
 export class AppModule { }

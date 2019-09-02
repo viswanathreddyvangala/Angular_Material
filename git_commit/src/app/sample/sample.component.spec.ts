@@ -19,7 +19,10 @@ describe('SampleComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create me', () => {
     expect(component).toBeTruthy();
   });
+  // it('Checking button enabled ', () => {
+  //   let email = compo
+  // });
 });
